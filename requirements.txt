@@ -1,0 +1,31 @@
+
+# Core RAG dependencies
+sentence-transformers>=2.2.2
+chromadb>=0.4.15
+numpy>=1.24.0
+
+# AI/ML APIs
+openai>=1.0.0
+
+# Data processing
+pandas>=2.0.0
+json5>=0.9.0
+
+# Optional: For advanced NLP features
+transformers>=4.30.0
+torch>=2.0.0
+
+# Utility libraries
+tqdm>=4.65.0
+requests>=2.31.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional: For web interface (if needed later)
+streamlit>=1.25.0
+flask>=2.3.0
+
+# Optional: For enhanced embeddings
+cohere>=4.21.0  # If using Cohere embeddings
