@@ -227,7 +227,6 @@ def rebuild_knowledge():
         return jsonify({'success': True, 'message': 'Knowledge base rebuilt successfully'})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
-
 if __name__ == '__main__':
     print("Starting Space Science Assistant Web Interface...")
     
@@ -235,8 +234,8 @@ if __name__ == '__main__':
         print("\n🚀 Space Science Assistant Web UI is ready!")
         print("🌟 Open your browser and navigate to: http://localhost:5000")
         print("🌙 Explore the cosmos with our AI assistant!\n")
-        
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        port = int(os.environ.get("PORT", 5000))  # ✅ CORRECT
+        app.run(host="0.0.0.0", port=port)
     else:
         print("❌ Failed to initialize the assistant. Please check your configuration.")
         sys.exit(1)
